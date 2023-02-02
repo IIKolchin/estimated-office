@@ -1,9 +1,17 @@
 .header {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 18px 112px;
   background-color: #5654db;
   color: #fff;
+}
+
+.header-home-link {
+  all: unset;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .header-logo {
@@ -30,6 +38,7 @@
 .header-link {
   margin-right: 32px;
   display: flex;
+  z-index: 1;
 }
 
 .header-link:last-of-type {
@@ -67,6 +76,8 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .header-button-register {
@@ -84,4 +95,6 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  cursor: pointer;
+  z-index: 1;
 }
