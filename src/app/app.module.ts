@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { HeadingSectionComponent } from './heading-section/heading-section.component';
 import { PricingSectionComponent } from './pricing-section/pricing-section.component';
 import { RateComponent } from './rate/rate.component';
+import { TrySectionComponent } from './try-section/try-section.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { RateComponent } from './rate/rate.component';
     HeaderComponent,
     HeadingSectionComponent,
     PricingSectionComponent,
-    RateComponent
+    RateComponent,
+    TrySectionComponent
   ],
   imports: [
     BrowserModule,
