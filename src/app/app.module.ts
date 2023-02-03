@@ -10,6 +10,7 @@ import { RateComponent } from './rate/rate.component';
 import { TrySectionComponent } from './try-section/try-section.component';
 import { QuoteSectionComponent } from './quote-section/quote-section.component';
 import { RegisterSectionComponent } from './register-section/register-section.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RegisterSectionComponent } from './register-section/register-section.co
     RateComponent,
     TrySectionComponent,
     QuoteSectionComponent,
-    RegisterSectionComponent
+    RegisterSectionComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
