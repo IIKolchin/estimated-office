@@ -1,0 +1,45 @@
+.pricing {
+  padding: 31px 112px 96px;
+  position: relative;
+  z-index: 3;
+  background-color: #fff;
+}
+
+.pricing-text-up {
+  margin: 0 0 12px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #4e4d9d;
+}
+
+.pricing-heading {
+  margin: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #101828;
+}
+
+.pricing-text-down {
+  margin: 20px 0 88px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #475467;
+}
+
+.pricing-rate {
+  display: flex;
+  gap: 32px;
+}
