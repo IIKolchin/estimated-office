@@ -11,6 +11,7 @@ import { TrySectionComponent } from './try-section/try-section.component';
 import { QuoteSectionComponent } from './quote-section/quote-section.component';
 import { RegisterSectionComponent } from './register-section/register-section.component';
 import { FooterComponent } from './footer/footer.component';
+import { TextMaskModule } from 'angular2-text-mask';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TextMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,6 +9,9 @@ import { UtilsService } from '../services/utils.service';
 export class HeaderComponent {
 
   constructor(private utilsService: UtilsService){}
-  scroll = this.utilsService.scroll
+  scroll = this.utilsService.scroll;
+
+  mobile = false;
+  window = window;
 
 }

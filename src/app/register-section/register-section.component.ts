@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { UtilsService } from '../services/utils.service';
+import emailMask from 'text-mask-addons/dist/emailMask';
 
 @Component({
   selector: 'app-register-section',
@@ -8,7 +9,8 @@ import { UtilsService } from '../services/utils.service';
   styleUrls: ['./register-section.component.scss'],
 })
 export class RegisterSectionComponent {
-  form: FormGroup
+  form: FormGroup;
+  emailMask = emailMask;
   constructor(private utilsService: UtilsService) {
     this.form = new FormGroup({
       username: new FormControl<string>('', [
@@ -20,7 +22,6 @@ export class RegisterSectionComponent {
         Validators.pattern(/^\S+@\S+\.\S+$/),
       ]),
     });
-
   }
 
   get username() {
@@ -33,7 +34,7 @@ export class RegisterSectionComponent {
 
   submit() {
     this.utilsService.createUser(this.form.value).then((res) => {
-      console.log(res)
+      console.log(res);
     });
   }
 }

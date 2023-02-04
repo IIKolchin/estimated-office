@@ -1,5 +1,5 @@
 .try {
-  margin: 25px 112px 0;
+  margin: 25px 7.77% 0;
   position: relative;
   overflow: hidden;
 }
@@ -12,7 +12,7 @@
 }
 
 .try-heading {
-  margin: 94px 0 20px 64px;
+  margin: 13% 0 20px 8.69%;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -23,7 +23,7 @@
 }
 
 .try-text {
-  margin: 0 0 40px 64px;
+  margin: 0 0 40px 8.69%;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -53,7 +53,7 @@
 }
 
 .buttons-group {
-  margin: 0 0 0 64px;
+  margin: 0 10px 0 8.69%;
   display: flex;
   gap: 12px;
 }
@@ -73,12 +73,58 @@
 }
 
 .try-pic {
+  width: 39.47%;
   border-radius: 0 24px 24px 0;
 }
 
 .try-image {
+  width: 64%;
   position: absolute;
   left: 0;
   top: 0;
   mix-blend-mode: color-dodge;
+}
+
+@media (max-width: 1100px) {
+  .try-heading {
+    margin-top: 5%;
+    font-size: 30px;
+  }
+
+  .try-text {
+    font-size: 16px;
+  }
+
+  %button {
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 800px) {
+  .try-heading,
+  .try-text {
+    text-align: center;
+  }
+
+  .buttons-group {
+    justify-content: center;
+  }
+
+  .try-group {
+    flex-wrap: wrap;
+  }
+
+  .try-pic {
+    width: 50%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 0;
+    margin: 0 auto;
+    z-index: 2;
+  }
+
+  .try-image {
+    width: 100%;
+
+  }
 }

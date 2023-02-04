@@ -1,5 +1,5 @@
 .pricing {
-  padding: 31px 112px 96px;
+  padding: 31px 7.77% 96px;
   position: relative;
   z-index: 3;
   background-color: #fff;
@@ -42,4 +42,12 @@
 .pricing-rate {
   display: flex;
   gap: 32px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+  .pricing-rate {
+    justify-content: center;
+  }
+
 }

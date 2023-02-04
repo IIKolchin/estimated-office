@@ -1,38 +1,100 @@
-<header class="header">
-  <a href="#" class="header-home-link">
-    <img class="header-logo" src="assets/images/logo.svg" alt="Лого" />
-    <p class="header-logo-text">СМЕТНЫЙ ОФИС</p>
-  </a>
-  <nav>
-    <ul class="header-links">
-      <li class="header-link">
-        <a href="#" class="header-link-text">Главная</a>
-      </li>
-      <li class="header-link">
-        <a href="#" class="header-link-text"
-          >Продукты
-          <img
-            class="header-link-select"
-            src="assets/images/select.svg"
-            alt=""
-          />
-        </a>
-      </li>
-      <li class="header-link">
-        <a href="#" class="header-link-text"
-          >Данные
-          <img
-            class="header-link-select"
-            src="assets/images/select.svg"
-            alt=""
-          />
-        </a>
-      </li>
-      <li class="header-link">
-        <a href="#" class="header-link-text">Цены</a>
-      </li>
-    </ul>
+<header>
+  <nav class="header">
+    <div class="header-group-links">
+      <a href="#" class="header-home-link">
+        <img class="header-logo" src="assets/images/logo.svg" alt="Лого" />
+        <p class="header-logo-text">СМЕТНЫЙ ОФИС</p>
+      </a>
+
+      <ul class="header-links">
+        <li class="header-link">
+          <a href="#" class="header-link-text">Главная</a>
+        </li>
+        <li class="header-link">
+          <a href="#" class="header-link-text"
+            >Продукты
+            <img
+              class="header-link-select"
+              src="assets/images/select.svg"
+              alt=""
+            />
+          </a>
+        </li>
+        <li class="header-link">
+          <a href="#" class="header-link-text"
+            >Данные
+            <img
+              class="header-link-select"
+              src="assets/images/select.svg"
+              alt=""
+            />
+          </a>
+        </li>
+        <li class="header-link">
+          <a href="#" class="header-link-text">Цены</a>
+        </li>
+      </ul>
+    </div>
+    <div class="header-buttons">
+      <button class="header-button-login">Логин</button>
+      <button (click)="scroll('form')" class="header-button-register">
+        Регистрация
+      </button>
+    </div>
+
+    <button
+      (click)="mobile = !mobile"
+      class="button-menu"
+      onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded',
+     this.classList.contains('opened'))"
+      aria-label="Main Menu"
+    >
+      <svg width="44" height="44" viewBox="0 0 100 100">
+        <path
+          class="line line1"
+          d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352
+         94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997
+          79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+        />
+        <path class="line line2" d="M 20,50 H 80" />
+        <path
+          class="line line3"
+          d="M 20,70.999954 H 80.000231 C 80.000231,70.999954
+         94.498839,71.182648 94.532987,33.288669 94.543142,22.019327
+          90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058
+          75.000211,25.000058 L 25.000021,74.999942"
+        />
+      </svg>
+    </button>
   </nav>
-  <button class="header-button-login">Логин</button>
-  <button (click)="scroll('form')" class="header-button-register">Регистрация</button>
+
+  <div *ngIf="mobile" class="header-mobile">
+    <nav>
+      <ul class="header-links-mobile">
+        <li class="header-link-mobile">
+          <a href="#" class="header-link-text-mobile">Главная</a>
+        </li>
+        <li class="header-link-mobile">
+          <a href="#" class="header-link-text-mobile">Продукты </a>
+        </li>
+        <li class="header-link-mobile">
+          <a href="#" class="header-link-text-mobile">Данные </a>
+        </li>
+        <li class="header-link-mobile">
+          <a href="#" class="header-link-text-mobile">Цены</a>
+        </li>
+        <li class="header-link-mobile">
+          <button href="#" class="header-button-text-mobile">Логин</button>
+        </li>
+        <li class="header-link-mobile">
+          <button
+            (click)="mobile && scroll('form')"
+            class="header-button-text-mobile"
+          >
+            Регистрация
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
