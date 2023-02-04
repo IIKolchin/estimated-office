@@ -1,7 +1,7 @@
 <div class="rate">
   <div class="heading-group">
     <h3 class="heading">Базовый тариф</h3>
-    <div class="bestseller">Бестселлер</div>
+    <div *ngIf='rate.bestseller' class="bestseller">Бестселлер</div>
   </div>
   <div class="price">
     <div class="price-value">{{ rate.price }}</div>

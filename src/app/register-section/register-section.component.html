@@ -1,9 +1,33 @@
-<form class='register' action="">
-  <h2 class='register-title'>Быстрая регистрация в Сметном офисе</h2>
-  <p class='register-text'>Начните работу прямо сейчас</p>
-  <input class='register-input' type="text" placeholder='Ваше имя'>
-  <input class='register-input' type="text" placeholder='Почта'>
-  <p class='register-caption'>Нажимая кнопку “Отправить” вы соглашаетесь на обработку персональных данных</p>
-  <button class='register-button' type='submit'>Зарегистрироваться</button>
-  <img class='register-img' src="../../assets/images/back_footer.svg" alt="">
+<form
+  id="form"
+  class="register"
+  action=""
+  [formGroup]="form"
+  (ngSubmit)="submit()"
+>
+  <h2 class="register-title">Быстрая регистрация в Сметном офисе</h2>
+  <p class="register-text">Начните работу прямо сейчас</p>
+  <input
+    class="register-input"
+    type="text"
+    placeholder="Ваше имя"
+    formControlName="username"
+  />
+  <p class="error" *ngIf="username.errors?.minlength && username.touched">
+    Минимальное количество символов: 2
+  </p>
+  <input
+    class="register-input"
+    type="text"
+    placeholder="Почта"
+    formControlName="email"
+  />
+  <p class="error" *ngIf="email.errors?.pattern && email.touched">
+    Неверный формат email
+  </p>
+  <p class="register-caption">
+    Нажимая кнопку “Отправить” вы соглашаетесь на обработку персональных данных
+  </p>
+  <button class="register-button">Зарегистрироваться</button>
+  <img class="register-img" src="../../assets/images/back_footer.svg" alt="" />
 </form>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 
 @Component({
@@ -9,5 +9,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'estimated-office';
 
+  @ViewChild('structure') public structure : ElementRef;
 
+  public moveToStructure():void {
+          this.structure.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'start' });
+          console.log(this.structure)
+  }
 }

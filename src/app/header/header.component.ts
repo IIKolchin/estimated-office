@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UtilsService } from '../services/utils.service';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+
+  constructor(private utilsService: UtilsService){}
+  scroll = this.utilsService.scroll
 
 }
