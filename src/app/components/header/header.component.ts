@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
-import { UtilsService } from '../services/utils.service';
+import { UtilsService } from '../../services/utils.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-
-  constructor(private utilsService: UtilsService){}
+  constructor(private utilsService: UtilsService) {}
   scroll = this.utilsService.scroll;
 
   mobile = false;
   window = window;
-
 }

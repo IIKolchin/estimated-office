@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Irate } from '../models/rate';
+import { Irate } from '../../models/rate';
 
 @Component({
   selector: 'app-rate',

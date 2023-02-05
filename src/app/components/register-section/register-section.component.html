@@ -21,7 +21,7 @@
     type="text"
     placeholder="Почта"
     formControlName="email"
-    [textMask]="{mask: emailMask}"
+    [textMask]="{ mask: emailMask }"
   />
   <p class="error" *ngIf="email.errors?.pattern && email.touched">
     Неверный формат email

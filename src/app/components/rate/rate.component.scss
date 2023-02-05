@@ -114,6 +114,7 @@
 .hr {
   border-top: 1px solid #eaecf0;
   padding-bottom: 40px;
+  box-sizing: border-box;
 }
 
 .support-text {
@@ -190,8 +191,4 @@
     font-size: 12px;
     line-height: 18px;
   }
-
-  // .hr {
-  //   p
-  // }
 }

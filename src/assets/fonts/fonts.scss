@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("./Montserrat-Bold.woff2") format("woff2"),
+    url("./Montserrat-Bold.woff") format("woff"),
+    url("./Montserrat-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Inter-Regular.woff2") format("woff2"),
+    url("./Inter-Regular.woff") format("woff"),
+    url("./Inter-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Inter-SemiBold.woff2") format("woff2"),
+    url("./Inter-SemiBold.woff") format("woff"),
+    url("./Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Inter-Medium.woff2") format("woff2"),
+    url("./Inter-Medium.woff") format("woff"),
+    url("./Inter-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./Roboto-Bold.woff2") format("woff2"),
+    url("./Roboto-Bold.woff") format("woff"),
+    url("./Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./Roboto-Italic.woff2") format("woff2"),
+    url("./Roboto-Italic.woff") format("woff"),
+    url("./Roboto-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}

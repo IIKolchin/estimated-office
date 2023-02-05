@@ -103,8 +103,6 @@
   display: none;
 }
 
-
-
 .line {
   fill: none;
   stroke: #fff;
@@ -144,8 +142,6 @@
   margin: 20px 0 0;
   padding: 0;
   list-style: none;
-  // text-align: center;
-
 }
 
 .header-link-text-mobile {
@@ -156,7 +152,6 @@
   font-weight: 400;
   font-size: 28px;
   line-height: 34px;
-
 }
 
 .header-link-mobile {
@@ -184,7 +179,6 @@
   color: #fff;
 }
 
-
 @media (max-width: 1000px) {
   .button-menu {
     display: block;
@@ -205,7 +199,7 @@
 
   .header-mobile {
     display: block;
-    height: 100Vh;
+    height: 100vh;
     overflow: hidden;
     background-color: #fff;
   }
