@@ -86,3 +86,35 @@
   line-height: 24px;
   color: #d0d5dd;
 }
+
+@media (max-width: 650px) {
+  .footer-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .footer-items-wrapper {
+    width: 180px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-wrapper {
+    display: grid;
+    grid-template-columns: auto;
+
+  }
+
+  .footer-items-wrapper {
+    width: 240px;
+  }
+
+  .footer-copy {
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    margin-bottom: 10px;
+  }
+}

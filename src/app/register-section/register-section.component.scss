@@ -101,3 +101,24 @@
   line-height: 24px;
   text-align: left;
 }
+
+@media (max-width: 800px) {
+  .register-title {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media (max-width: 500px) {
+  .register {
+    padding-top: 40px;
+  }
+
+  .register-input,
+  .register-caption,
+  .register-button,
+  .register-text,
+  .register-title {
+    width: 80%;
+  }
+}
