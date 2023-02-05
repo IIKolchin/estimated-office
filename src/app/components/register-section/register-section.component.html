@@ -29,6 +29,16 @@
   <p class="register-caption">
     Нажимая кнопку “Отправить” вы соглашаетесь на обработку персональных данных
   </p>
-  <button class="register-button">Зарегистрироваться</button>
+  <button
+    class="register-button"
+    [disabled]="email.errors || username.errors"
+    [ngClass]="
+      email.errors || username.errors
+        ? 'register-button-disabled'
+        : 'gradient-blue'
+    "
+  >
+    Зарегистрироваться
+  </button>
   <img class="register-img" src="../../assets/images/back_footer.svg" alt="" />
 </form>

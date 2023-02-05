@@ -1,7 +1,10 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
 .section {
   position: relative;
   padding: 102px 0 192px;
-  background-color: #5654db;
+  background-color: $violet;
 }
 
 .heading-text-up {
@@ -12,7 +15,7 @@
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  color: #e9d7fe;
+  color: $pink;
 }
 
 .heading-title {
@@ -26,7 +29,7 @@
   line-height: 90px;
   text-align: center;
   letter-spacing: -0.02em;
-  color: #fff;
+  color: $white;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
@@ -40,7 +43,7 @@
   font-size: 20px;
   line-height: 30px;
   text-align: center;
-  color: #e9d7fe;
+  color: $pink;
   z-index: 1;
 }
 
@@ -50,7 +53,24 @@
   margin: 48px 0 0;
 }
 
-%button {
+.heading-button-demonstration {
+  @extend %button;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  z-index: 1;
+  padding: 16px 28px;
+  margin-right: 12px;
+  color: #344054;
+  background-color: $white;
+  border: 1px solid #d0d5dd;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+.heading-button-registration {
+  @extend %button;
   padding: 16px 28px;
   font-family: "Inter";
   font-style: normal;
@@ -58,28 +78,30 @@
   font-size: 18px;
   line-height: 28px;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
   z-index: 1;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
-.heading-button-demonstration {
-  @extend %button;
-  margin-right: 12px;
-  color: #344054;
-  background-color: #fff;
-  border: 1px solid #d0d5dd;
-  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-}
-
-.heading-button-registration {
-  @extend %button;
-  background: #1513ad;
+  background-color: #1513ad;
   border: 1px solid #1513ad;
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-  color: #fff;
+  color: $white;
+}
+
+.heading-button-registration:hover {
+  @extend %hover;
+  border: none;
+}
+
+.heading-button-demonstration:hover {
+  @extend %hover;
+  color: $white;
+  border: none;
+}
+
+.heading-button-registration.gradient-blue:hover {
+  @include gradientBlue;
+}
+
+.heading-button-demonstration.gradient-violet:hover {
+  @include gradientViolet;
 }
 
 .heading-button-icon {
@@ -140,7 +162,8 @@
     margin-left: 5%;
   }
 
-  %button {
+  .heading-button-demonstration,
+  .heading-button-registration {
     padding: 10px 12px;
   }
 }

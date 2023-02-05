@@ -1,3 +1,6 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
 .rate {
   width: 384px;
   border: 1px solid #eaecf0;
@@ -35,7 +38,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color: #5654db;
+  color: $violet;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,25 +81,16 @@
   color: #475467;
 }
 
-%button {
-  all: unset;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.button-buy {
+  @extend %button;
   width: 320px;
   height: 48px;
-  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-  border-radius: 8px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  box-sizing: border-box;
-}
-
-.button-buy {
-  @extend %button;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
   margin: 0 32px 12px;
   background-color: #1719dd;
   border: 1px solid #1719dd;
@@ -105,10 +99,37 @@
 
 .button-more {
   @extend %button;
+  width: 320px;
+  height: 48px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
   margin: 0 32px 32px;
-  background-color: #fff;
+  background-color: $white;
   border: 1px solid #d0d5dd;
   color: #344054;
+}
+
+.button-buy:hover {
+  @extend %hover;
+  border: none;
+}
+
+.button-more:hover {
+  @extend %hover;
+  color: $white;
+  border: none;
+}
+
+.button-buy.gradient-blue:hover {
+  @include gradientBlue;
+}
+
+.button-more.gradient-violet:hover {
+  @include gradientViolet;
 }
 
 .hr {

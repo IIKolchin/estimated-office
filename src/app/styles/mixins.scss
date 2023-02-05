@@ -1,0 +1,21 @@
+@mixin gradientBlue {
+  background-image: linear-gradient(
+    to right,
+    #1719dd,
+    #4481eb,
+    #04befe,
+    #5654db
+  );
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+@mixin gradientViolet {
+  background-image: linear-gradient(
+    to right,
+    #667eea,
+    #764ba2,
+    #6b8dd6,
+    #8e37d7
+  );
+  box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}

@@ -1,10 +1,13 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 7.77%;
-  background-color: #5654db;
-  color: #fff;
+  background-color: $violet;
+  color: $white;
 }
 
 .header-group-links {
@@ -57,6 +60,11 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  transition: all 0.4s ease-in-out;
+}
+
+.header-link-text:hover {
+  color: $pink;
 }
 
 .header-link-select {
@@ -67,17 +75,12 @@
   display: flex;
 }
 
-%button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.header-button-login {
+  @extend %button;
+  background-color: inherit;
   margin-right: 12px;
   padding: 10px 18px;
-  border-radius: 8px;
   border: none;
-  cursor: pointer;
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -85,14 +88,33 @@
   color: #fff;
 }
 
-.header-button-login {
-  @extend %button;
-  background-color: inherit;
-}
-
 .header-button-register {
   @extend %button;
   background-color: #1719dd;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  z-index: 1;
+  color: #fff;
+}
+
+.header-button-register:hover {
+  @extend %hover;
+}
+
+.header-button-login:hover {
+  @extend %hover;
+}
+
+.header-button-register.gradient-blue:hover {
+  @include gradientBlue;
+}
+
+.header-button-login.gradient-violet:hover {
+  @include gradientViolet;
 }
 
 .button-menu {
@@ -152,6 +174,11 @@
   font-weight: 400;
   font-size: 28px;
   line-height: 34px;
+  transition: all 0.4s ease-in-out;
+}
+
+.header-link-text-mobile:hover {
+  color: $violet;
 }
 
 .header-link-mobile {
@@ -172,11 +199,12 @@
   font-weight: 400;
   font-size: 28px;
   line-height: 34px;
+  transition: all 0.4s ease-in-out;
 }
 
 .header-button-text-mobile:hover {
-  background-color: #5654db;
-  color: #fff;
+  background-color: $violet;
+  color: $white;
 }
 
 @media (max-width: 1000px) {
@@ -201,6 +229,6 @@
     display: block;
     height: 100vh;
     overflow: hidden;
-    background-color: #fff;
+    background-color: $white;
   }
 }
